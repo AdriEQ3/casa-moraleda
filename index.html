@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa Moraleda · Cocido madrileño y cachopo asturiano en Arturo Soria</title>
+<meta name="description" content="Restaurante en Arturo Soria (Ciudad Lineal, Madrid). Cocido madrileño en puchero de barro y cachopo asturiano. Receta familiar desde 1945.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf5ec;--ink:#2a1a14;--muted:#6f5c52;--red:#8c2f1f;--gold:#b8893b;--dark:#1f1410;--card:#fff;--line:#e6d9c4}
+@media(prefers-color-scheme:dark){:root{--bg:#1a110d;--ink:#f3e9da;--muted:#b9a794;--card:#261914;--line:#3a2a22;--dark:#120b08}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:16px/1.65 Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit}
+nav{position:fixed;inset:0 0 auto;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav b{font:600 1.5rem 'Cormorant Garamond',serif;letter-spacing:.04em}
+nav div{display:flex;gap:22px;align-items:center;font-size:.92rem}
+nav a{text-decoration:none}
+.btn{display:inline-block;background:var(--red);color:#fff!important;padding:12px 26px;border-radius:99px;text-decoration:none;font-weight:500;border:0;cursor:pointer;font-size:1rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px #8c2f1f55}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:120px 6vw 70px;color:#f6ead8;background:radial-gradient(ellipse at 50% 30%,#4b2418,#1f1410 70%);position:relative;overflow:hidden}
+.hero small{letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-size:.8rem}
+.hero h1{font-size:clamp(3rem,9vw,6.5rem);margin:14px 0}
+.hero h1 em{color:var(--gold);font-weight:500}
+.hero p{max-width:540px;margin:0 auto 30px;opacity:.85}
+.steam{position:absolute;bottom:0;left:0;right:0;height:50%;pointer-events:none}
+.steam i{position:absolute;bottom:-40px;width:90px;height:90px;border-radius:50%;background:#fff;opacity:0;filter:blur(40px);animation:rise 9s infinite}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}25%{opacity:.09}100%{transform:translateY(-380px) scale(1.8);opacity:0}}
+section{padding:90px 6vw;max-width:1100px;margin:auto}
+.tag{color:var(--red);letter-spacing:.25em;text-transform:uppercase;font-size:.78rem;font-weight:500}
+h2{font-size:clamp(2.1rem,5vw,3.4rem);margin:8px 0 18px}
+.lead{color:var(--muted);max-width:640px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px #0000001f}
+.card h3{font-size:2rem}
+.price{font:600 2.4rem 'Cormorant Garamond',serif;color:var(--red);margin:12px 0 4px}
+.price small{font:400 .85rem Inter;color:var(--muted)}
+.band{background:var(--dark);color:#f3e9da;max-width:none}
+.band>div{max-width:1100px;margin:auto}
+.stats{display:flex;flex-wrap:wrap;gap:40px;margin-top:34px}
+.stats b{display:block;font:600 3rem 'Cormorant Garamond',serif;color:var(--gold)}
+.reviews blockquote{font:italic 500 1.35rem 'Cormorant Garamond',serif;border-left:3px solid var(--gold);padding-left:18px;margin-top:20px}
+form{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-top:34px;background:var(--card);border:1px solid var(--line);padding:30px;border-radius:20px}
+label{font-size:.82rem;color:var(--muted);display:grid;gap:6px}
+input,select{font:inherit;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+form .btn{grid-column:1/-1}
+.note{font-size:.8rem;color:var(--muted);grid-column:1/-1}
+footer{background:var(--dark);color:#cdbba5;padding:50px 6vw;text-align:center;font-size:.9rem}
+footer a{color:var(--gold)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s}
+.rv.on{opacity:1;transform:none}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:8px 12px;font-size:1.1rem;cursor:pointer}
+nav a.act:not(.btn){color:var(--red);font-weight:500}
+section,header,footer{scroll-margin-top:70px}
+.two{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center}
+.photo{width:100%;aspect-ratio:1;object-fit:cover;border-radius:22px;box-shadow:0 20px 50px #0000003a}
+.menu{list-style:none;padding:0;margin-top:18px}
+.menu li{display:flex;gap:10px;align-items:baseline;padding:9px 0;border-bottom:1px dotted var(--line)}
+.menu li span:first-child{flex:1}
+.menu b{color:var(--red);font-weight:500;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chips span{border:1px solid var(--line);background:var(--card);padding:7px 16px;border-radius:99px;font-size:.92rem}
+h3.sub{font-size:1.6rem;margin-top:34px}
+.daily{background:var(--red);color:#fff;border-radius:24px;padding:40px;text-align:center}
+.daily h2{margin:6px 0}.daily .big{font:600 4rem 'Cormorant Garamond',serif;color:#f3d9a4}
+.daily .btn{background:#fff;color:var(--red)!important;margin-top:18px}
+@media(max-width:760px){.burger{display:block}
+nav div{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 5vw 18px}
+nav div.open{display:flex}nav div a{padding:12px 0;border-bottom:1px solid var(--line)}nav div a.btn{text-align:center;margin-top:12px;border:0}}
+@media(prefers-reduced-motion:reduce){.steam i,.rv{animation:none;transition:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><b>Casa Moraleda</b><button class="burger" aria-label="Menú" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
+<div id="nl"><a href="#inicio">Inicio</a><a href="#carta">Carta</a><a href="#menu-dia">Menú del día</a><a href="#desayunos">Desayunos</a><a href="#historia">Historia</a><a href="#contacto">Contacto</a><a class="btn" href="#reservas">Reservar</a></div></nav>
+
+<header class="hero" id="inicio">
+  <div class="steam"><i style="left:20%"></i><i style="left:45%;animation-delay:3s"></i><i style="left:70%;animation-delay:6s"></i></div>
+  <div style="position:relative">
+    <small>Arturo Soria · Ciudad Lineal · Madrid</small>
+    <h1>Cocido madrileño<br>y <em>cachopo</em> asturiano</h1>
+    <p>Receta familiar en puchero de barro, cocinada a fuego lento. Tradición, historia y cultura en cada plato.</p>
+    <a class="btn" href="#reservas">Reservar mesa</a>
+  </div>
+</header>
+
+<section id="carta" class="rv">
+  <div class="two">
+    <div>
+      <span class="tag">Nuestra carta</span>
+      <h2>Dos platos, una devoción</h2>
+      <p class="lead">Cocina casera y generosa, hecha a fuego lento.</p>
+    </div>
+    <img class="photo" src="cocido.jpg" alt="Cocido madrileño de Casa Moraleda" loading="lazy">
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Cocido madrileño</h3><p>En puchero de barro, con ingredientes frescos y cuidadosamente seleccionados. Empieza con su sopa de cocido.</p><div class="price">27 € <small>por persona</small></div></div>
+    <div class="card"><h3>Cachopo asturiano</h3><p>Para compartir entre dos, con patatas y pimientos. También en versión cecina y queso de cabrales.</p><div class="price">25 € <small>para dos personas</small></div></div>
+  </div>
+  <h3 class="sub">Más platos de la casa</h3>
+  <div class="chips"><span>Migas</span><span>Costillar</span><span>Bacalao en salsa</span><span>Pimientos rellenos</span><span>Chipirones encebollados y arroz</span><span>Tortellini de queso y espinacas</span><span>Ensalada César</span><span>Tortilla de patata</span></div>
+  <h3 class="sub">Postres</h3>
+  <div class="chips"><span>Tarta de queso</span><span>Brownie de chocolate</span><span>Tiramisú</span><span>Hojaldre de nata artesanal</span><span>Sorbete de mojito</span><span>Crema de yogur y frutos rojos</span></div>
+</section>
+
+<section id="menu-dia" class="rv">
+  <div class="daily">
+    <span class="tag" style="color:#f3d9a4">De lunes a viernes</span>
+    <h2>Menú del día</h2>
+    <div class="big">13,50 €</div>
+    <p>Un primer plato y un segundo a elegir, con bebida, pan y postre o café incluido.</p>
+    <a class="btn" href="#reservas">Reservar mesa</a>
+  </div>
+</section>
+
+<section id="desayunos" class="rv">
+  <span class="tag">Desayunos</span>
+  <h2>Empieza el día con sabor</h2>
+  <p class="lead">Tostas, tortilla de patata y buen café. Los combinados incluyen café.</p>
+  <div class="grid">
+    <ul class="menu">
+      <li><span>Café solo</span><b>1,80 €</b></li>
+      <li><span>Café cortado</span><b>1,80 €</b></li>
+      <li><span>Café con leche</span><b>1,90 €</b></li>
+      <li><span>Infusión</span><b>1,80 €</b></li>
+      <li><span>Tosta de tomate y aceituna</span><b>2,50 €</b></li>
+      <li><span>Tosta de salmorejo</span><b>3,20 €</b></li>
+      <li><span>Tosta de tomate y jamón</span><b>3,20 €</b></li>
+    </ul>
+    <ul class="menu">
+      <li><span>Tosta con mantequilla y marmelada + café</span><b>3,20 €</b></li>
+      <li><span>Tosta con tomate y aceitunas negras + café</span><b>3,30 €</b></li>
+      <li><span>Tosta de salmorejo con crujiente de jamón y huevo + café</span><b>4,40 €</b></li>
+      <li><span>Tosta con tomate y jamón serrano + café</span><b>4,40 €</b></li>
+      <li><span>Pincho de tortilla + café</span><b>4,50 €</b></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band rv"><div>
+  <span class="tag" style="color:var(--gold)">Reconocimientos</span>
+  <h2>Premiados y aplaudidos</h2>
+  <div class="stats">
+    <div><b>4,5 ★</b>+367 reseñas en Google</div>
+    <div><b>1945</b>Casa Moraleda, Torrelaguna</div>
+    <div><b>3</b>generaciones de cocido</div>
+  </div>
+  <!-- AQUÍ: logos/nombres de los premios (pendiente de confirmar) -->
+</div></section>
+
+<section id="historia" class="rv">
+  <span class="tag">Nuestra historia</span>
+  <h2>De Torrelaguna a Arturo Soria</h2>
+  <p class="lead">En 1945, Don Teófilo Moraleda Fernández fundó una humilde casa de comidas en Torrelaguna. Su hijo y su nieto continuaron la pasión por el cocido en puchero de barro, y hoy esa receta llega a Ciudad Lineal para invitar a la tertulia lenta, serena y amable de los viejos castellanos.</p>
+</section>
+
+<section class="reviews rv">
+  <span class="tag">Lo que dicen</span>
+  <blockquote>“Uno de los mejores cocidos del año. Ración muy generosa y muy buena relación calidad-precio.”</blockquote>
+  <blockquote>“Auténtica comida casera. El personal, súper amable: estuvimos como en casa.”</blockquote>
+</section>
+
+<section id="reservas" class="rv">
+  <span class="tag">Reservas</span>
+  <h2>Reserva tu mesa</h2>
+  <p class="lead">Local pequeño y acogedor: te recomendamos reservar, sobre todo para el cocido.</p>
+  <form id="rf">
+    <label>Nombre<input name="n" required></label>
+    <label>Teléfono<input name="t" type="tel" required></label>
+    <label>Fecha<input name="d" type="date" required></label>
+    <label>Hora<select name="h"><option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option><option>15:00</option></select></label>
+    <label>Personas<select name="p"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select></label>
+    <button class="btn" type="submit">Enviar reserva por WhatsApp</button>
+    <p class="note">Vista previa: la reserva se envía por WhatsApp al local. En la versión final se conecta a un sistema de gestión de reservas.</p>
+  </form>
+</section>
+
+<footer id="contacto">
+  <p><b>Casa Moraleda</b> · C. de Agastia, 48, 28027 Madrid</p>
+  <p><a href="tel:+34625336601">625 33 66 01</a> · <a href="mailto:casamoraledamadrid@gmail.com">casamoraledamadrid@gmail.com</a> · <a href="https://www.instagram.com/casamoraledamadrid/">Instagram</a></p>
+  <p style="margin-top:10px"><a href="https://maps.app.goo.gl/ysqGwgSbZtfckmTp8">Cómo llegar</a> · Horario: [pendiente de confirmar]</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const links=[...document.querySelectorAll('#nl a:not(.btn)')];
+links.forEach(a=>a.addEventListener('click',()=>document.getElementById('nl').classList.remove('open')));
+const spy=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)links.forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+x.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('header[id],section[id],footer[id]').forEach(el=>spy.observe(el));
+const PHONE='34625336601';
+document.getElementById('rf').addEventListener('submit',e=>{
+  e.preventDefault();const f=new FormData(e.target);
+  const m=`Hola, quiero reservar en Casa Moraleda:%0A${f.get('n')} · ${f.get('p')} personas%0A${f.get('d')} a las ${f.get('h')}%0ATeléfono: ${f.get('t')}`;
+  window.open(`https://wa.me/${PHONE}?text=${m}`,'_blank');
+});
+document.querySelector('input[type=date]').min=new Date().toISOString().split('T')[0];
+</script>
+</body>
+</html>
