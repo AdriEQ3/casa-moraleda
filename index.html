@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Casa Moraleda Arturo Soria · Cocido madrileño y cachopo · Desde 1945</title>
-<meta name="description" content="Casa Moraleda en Arturo Soria (Madrid). Cocido madrileño en puchero de barro y cachopo asturiano. Tres generaciones de cocina tradicional desde 1945.">
+<meta name="description" content="Casa Moraleda, cocina tradicional y cocido madrileño en puchero de barro en Calle de Agastia, Madrid. Reserva por teléfono.">
+<meta name="theme-color" content="#211611">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -47,6 +48,10 @@ h2{font-size:clamp(2.1rem,5vw,3.4rem);margin:8px 0 18px}
 .tile.img{background:linear-gradient(#0000,#000a),url(cocido.jpg) center/cover}
 .tile.b{background:linear-gradient(160deg,#7a5a2a,#2a1710)}.tile.c{background:linear-gradient(160deg,#9a5a3a,#2f1a12)}
 .tile h3{font-size:1.8rem}.tile p{font-size:.92rem;opacity:.9}
+.dish{padding:0;overflow:hidden;background:var(--card)}.dish img{display:block;width:100%;height:230px;object-fit:cover;transition:transform .7s}.dish:hover img{transform:scale(1.045)}.dish>div{padding:22px 24px 25px}.dish .eyebrow{font-size:.65rem;color:var(--gold);letter-spacing:.2em}.dish h3{margin:5px 0 8px}.dish p{color:var(--muted);font-size:.94rem}
+.image-note{font-size:.78rem;color:var(--muted);margin-top:18px}
+.map{width:100%;height:340px;border:0;border-radius:20px;margin-top:28px;filter:grayscale(.18) sepia(.12)}
+.price-note{font-size:.8rem;color:var(--muted);margin-top:16px}
 .band{background:var(--dark);color:#f3e9da;max-width:none}
 .band>div{max-width:1100px;margin:auto}
 .stats{display:flex;flex-wrap:wrap;gap:40px;margin-top:30px}
@@ -104,9 +109,9 @@ nav div.open{display:flex}nav div a{padding:12px 0;border-bottom:1px solid var(-
 </section>
 
 <section class="band rv"><div>
-  <div class="eyebrow">Reconocimientos</div>
-  <h2>Premiados y <em>aplaudidos</em></h2>
-  <div class="stats"><div><b>4,5 ★</b>+367 reseñas en Google</div><div><b>80+</b>años cocinando</div><div><b>3</b>generaciones</div></div>
+  <div class="eyebrow">Una casa con historia</div>
+  <h2>Tradición que <em>se comparte</em></h2>
+  <div class="stats"><div><b>4,5 ★</b>valoración pública en Google</div><div><b>80+</b>años cocinando</div><div><b>3</b>generaciones</div></div>
   <!-- AQUÍ: premios (pendiente de confirmar) -->
 </div></section>
 
@@ -115,10 +120,11 @@ nav div.open{display:flex}nav div a{padding:12px 0;border-bottom:1px solid var(-
   <h2>Sabores <em>de siempre</em></h2>
   <p class="lead">Cocinamos despacio y con producto de proximidad, respetando la receta tradicional que ha pasado de generación en generación.</p>
   <div class="grid">
-    <div class="tile img"><div><h3>Cocido madrileño</h3><p>El clásico de la casa, servido en pucheros de barro.</p></div></div>
-    <div class="tile b"><div><h3>Cachopo asturiano</h3><p>Para compartir, con patatas y pimientos.</p></div></div>
-    <div class="tile c"><div><h3>Postres caseros</h3><p>Tarta de queso, torrijas, brownie y mucho más.</p></div></div>
+    <article class="card dish"><img src="cocido.jpg" alt="Cocido madrileño servido en puchero de barro" loading="lazy"><div><div class="eyebrow">La especialidad</div><h3>Cocido madrileño</h3><p>La receta de la casa, cocinada despacio y servida en puchero de barro.</p></div></article>
+    <article class="card dish"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85" alt="Plato de carne dorada, inspiración para el cachopo" loading="lazy"><div><div class="eyebrow">Para compartir</div><h3>Cachopo asturiano</h3><p>Una de las especialidades de la casa. Consulta las opciones disponibles.</p></div></article>
+    <article class="card dish"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85" alt="Tarta de chocolate de elaboración artesanal" loading="lazy"><div><div class="eyebrow">Hecho en casa</div><h3>Postres caseros</h3><p>Un final dulce para alargar la sobremesa.</p></div></article>
   </div>
+  <p class="image-note">Las fotografías del cachopo y del postre son imágenes ilustrativas; pueden no corresponder a los platos servidos en el restaurante.</p>
 </section>
 
 <section id="carta" class="rv">
@@ -127,18 +133,18 @@ nav div.open{display:flex}nav div a{padding:12px 0;border-bottom:1px solid var(-
   <div class="grid">
     <div class="card"><h3>Gran cocido</h3><p>En puchero de barro, a fuego lento, con sopa de cocido.</p><ul class="menu"><li><span>Cocido madrileño</span><b>27 € /persona</b></li><li><span>Cachopo asturiano<em>Para dos, con patatas y pimientos. También de cecina y queso de cabrales</em></span><b>25 €</b></li></ul></div>
     <div class="card"><h3>Entrantes</h3><ul class="menu">
-      <li><span>Ensalada de la casa</span><b>15,50 €</b></li>
-      <li><span>Ensalada templada de burrata<em>Con tomate confitado y nube de parmesano</em></span><b>15,90 €</b></li>
-      <li><span>Migas de pueblo<em>Con torreznos y pimientos de Gernika</em></span><b>13,90 €</b></li>
-      <li><span>Judía mantecosa del Valle de Lozoya</span><b>15,90 €</b></li>
-      <li><span>Arroz caldoso marinero</span><b>19,90 €</b></li>
+      <li><span>Ensalada de la casa</span><b>Consultar</b></li>
+      <li><span>Ensalada templada de burrata<em>Con tomate confitado y nube de parmesano</em></span><b>Consultar</b></li>
+      <li><span>Migas de pueblo<em>Con torreznos y pimientos de Gernika</em></span><b>Consultar</b></li>
+      <li><span>Judía mantecosa del Valle de Lozoya</span><b>Consultar</b></li>
+      <li><span>Arroz caldoso marinero</span><b>Consultar</b></li>
       <li><span>Sopa de cocido</span><b></b></li><li><span>Pimientos rellenos</span><b></b></li>
       <li><span>Chipirones encebollados y arroz</span><b></b></li>
       <li><span>Tortellini de queso y espinacas</span><b></b></li><li><span>Ensalada César</span><b></b></li></ul></div>
     <div class="card"><h3>Segundos</h3><ul class="menu">
-      <li><span>Entrecot de la Sierra</span><b>22,90 €</b></li>
-      <li><span>Rabo de toro</span><b>21,90 €</b></li>
-      <li><span>Lomo de bacalao confitado<em>Con tomate al horno</em></span><b>19,90 €</b></li>
+      <li><span>Entrecot de la Sierra</span><b>Consultar</b></li>
+      <li><span>Rabo de toro</span><b>Consultar</b></li>
+      <li><span>Lomo de bacalao confitado<em>Con tomate al horno</em></span><b>Consultar</b></li>
       <li><span>Costillar</span><b></b></li><li><span>Bacalao en salsa</span><b></b></li><li><span>Tortilla de patata</span><b></b></li></ul></div>
     <div class="card"><h3>Postres caseros</h3><ul class="menu">
       <li><span>Torrija de brioche<em>Con almíbar de ron añejo y naranja</em></span><b></b></li>
@@ -153,8 +159,8 @@ nav div.open{display:flex}nav div a{padding:12px 0;border-bottom:1px solid var(-
   <div class="daily">
     <div class="eyebrow" style="color:#f3d9a4">De lunes a viernes</div>
     <h2>Menú del día</h2>
-    <div class="big">13,50 €</div>
-    <p>Un primer plato y un segundo a elegir, con bebida, pan y postre o café incluido.</p>
+    <div class="big">Cada día</div>
+    <p>Consulta por teléfono los platos y el precio del menú diario.</p>
     <a class="btn" href="#reservas">Reservar mesa</a>
   </div>
 </section>
@@ -164,8 +170,8 @@ nav div.open{display:flex}nav div a{padding:12px 0;border-bottom:1px solid var(-
   <h2>Empieza el día <em>con sabor</em></h2>
   <p class="lead">Tostas, tortilla de patata y buen café. Los combinados incluyen café.</p>
   <div class="grid">
-    <ul class="menu"><li><span>Café solo</span><b>1,80 €</b></li><li><span>Café cortado</span><b>1,80 €</b></li><li><span>Café con leche</span><b>1,90 €</b></li><li><span>Infusión</span><b>1,80 €</b></li><li><span>Tosta de tomate y aceituna</span><b>2,50 €</b></li><li><span>Tosta de salmorejo</span><b>3,20 €</b></li><li><span>Tosta de tomate y jamón</span><b>3,20 €</b></li></ul>
-    <ul class="menu"><li><span>Tosta con mantequilla y marmelada + café</span><b>3,20 €</b></li><li><span>Tosta con tomate y aceitunas negras + café</span><b>3,30 €</b></li><li><span>Tosta de salmorejo con crujiente de jamón y huevo + café</span><b>4,40 €</b></li><li><span>Tosta con tomate y jamón serrano + café</span><b>4,40 €</b></li><li><span>Pincho de tortilla + café</span><b>4,50 €</b></li></ul>
+    <ul class="menu"><li><span>Café solo</span><b>Consultar</b></li><li><span>Café cortado</span><b>Consultar</b></li><li><span>Café con leche</span><b>Consultar</b></li><li><span>Infusión</span><b>Consultar</b></li><li><span>Tosta de tomate y aceituna</span><b>Consultar</b></li><li><span>Tosta de salmorejo</span><b>Consultar</b></li><li><span>Tosta de tomate y jamón</span><b>Consultar</b></li></ul>
+    <ul class="menu"><li><span>Tosta con mantequilla y mermelada + café</span><b>Consultar</b></li><li><span>Tosta con tomate y aceitunas negras + café</span><b>Consultar</b></li><li><span>Tosta de salmorejo con crujiente de jamón y huevo + café</span><b>Consultar</b></li><li><span>Tosta con tomate y jamón serrano + café</span><b>Consultar</b></li><li><span>Pincho de tortilla + café</span><b>Consultar</b></li></ul>
   </div>
 </section>
 
@@ -178,7 +184,7 @@ nav div.open{display:flex}nav div a{padding:12px 0;border-bottom:1px solid var(-
 <section id="reservas" class="rv">
   <div class="eyebrow" style="color:var(--red)">Reservas</div>
   <h2>Reserva <em>tu mesa</em></h2>
-  <p class="lead">Local pequeño y acogedor: te recomendamos reservar, sobre todo para el cocido.</p>
+  <p class="lead">Para reservar, llámanos o envíanos tu solicitud por WhatsApp. La mesa queda pendiente de confirmación del restaurante.</p>
   <form id="rf">
     <label>Nombre<input name="n" required></label>
     <label>Teléfono<input name="t" type="tel" required></label>
@@ -186,18 +192,19 @@ nav div.open{display:flex}nav div a{padding:12px 0;border-bottom:1px solid var(-
     <label>Hora<select name="h"><option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option><option>15:00</option></select></label>
     <label>Personas<select name="p"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select></label>
     <button class="btn" type="submit">Enviar reserva por WhatsApp</button>
-    <p class="note">Vista previa: la reserva se envía por WhatsApp al local. En la versión final se conecta a un sistema de gestión de reservas.</p>
+    <p class="note">Se abrirá WhatsApp con los datos de tu solicitud. La reserva no queda confirmada hasta recibir respuesta.</p>
   </form>
 </section>
 
 <footer id="contacto">
   <div class="cols">
     <div><h3>Casa Moraleda</h3><p>Cocina tradicional madrileña en Arturo Soria. Tres generaciones desde 1945.</p></div>
-    <div><h3>Dónde estamos</h3><p>C. de Agastia, 48<br>28027 Madrid (Ciudad Lineal)<br><a href="https://maps.app.goo.gl/ysqGwgSbZtfckmTp8">Cómo llegar</a></p></div>
-    <div><h3>Contacto</h3><p><a href="tel:+34625336601">625 33 66 01</a><br><a href="mailto:casamoraledamadrid@gmail.com">casamoraledamadrid@gmail.com</a><br><a href="https://www.instagram.com/casamoraledamadrid/">Instagram</a><br>Horario: [pendiente de confirmar]</p></div>
+    <div><h3>Dónde estamos</h3><p>C. de Agastia, 48<br>28027 Madrid (Ciudad Lineal)<br><a href="https://maps.app.goo.gl/NfkQT2JZ5dF7yzR47" target="_blank" rel="noopener">Cómo llegar</a></p></div>
+    <div><h3>Contacto</h3><p><a href="tel:+34625336601">625 33 66 01</a><br><a href="mailto:casamoraledamadrid@gmail.com">casamoraledamadrid@gmail.com</a><br><a href="https://www.instagram.com/casamoraledamadrid/">Instagram</a><br>Horario: consultar por teléfono</p></div>
   </div>
   <small>© 2026 Casa Moraleda · Arturo Soria. Vista previa de diseño.</small>
 </footer>
+<section class="rv" aria-label="Ubicación de Casa Moraleda"><div class="eyebrow" style="color:var(--red)">Encuéntranos</div><h2>En el barrio de <em>Arturo Soria</em></h2><p class="lead">Calle de Agastia, 48 · 28027 Madrid</p><iframe class="map" title="Mapa de Casa Moraleda en Calle de Agastia, Madrid" src="https://maps.google.com/maps?q=Casa%20Moraleda%2C%20Calle%20de%20Agastia%2048%2C%20Madrid&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></section>
 <a class="wa" href="https://wa.me/34625336601" aria-label="WhatsApp">💬</a>
 
 <script>
